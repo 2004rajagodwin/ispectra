@@ -1,0 +1,224 @@
+/* compliance page st */
+
+
+/* parner section st */
+
+.isp-partner-main-div-fle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+   margin-top: 30px;
+}
+.isp-partner-main-div-fle-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+   margin-top: 30px;
+}
+
+
+
+
+.isp-partner-main-section{
+    background-image: url(../images/gp-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0px;
+}
+
+
+.isp-partner-main-div-img{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* parner section st */
+
+
+
+/* compliance page  end */
+
+
+/* cyper security page  st */
+
+.isp-lands-solution-section .col-md-6{
+    padding: 4px;
+}
+
+
+.isp-lands-solution-section{
+   padding: 60PX 0PX;
+    background-color:#e7e5f8 ;
+}
+.isp-lands-solution-divv{
+    background-color: #83328E;
+    color: #fff;
+ padding: 20px;
+ text-align: center;
+  border-radius: 10px 10px 0 0; 
+}
+
+.isp-lands-solution-divv-1{
+     background-color: #fff;
+    color: #000;
+  padding: 20px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+
+/* hover ani */
+
+.isp-lands-solution-divv-1 {
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  text-align: center;
+  margin-top: 6px;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.isp-lands-solution-divv-1:hover {
+  border-color: #83328E;
+  box-shadow: 0 4px 15px rgba(131, 50, 142, 0.2);
+      background: linear-gradient(270deg, #237123 -29.12%, #317A31 100%);
+       background: linear-gradient(270deg, #114C8E -29.12%, #34405D 100%);
+       
+}
+
+
+/* 3col- cdn section st */
+
+.cta-ice-main-section-maindiv-1{
+  text-align: center;
+}
+.cy-3col-cdn-div-section-1 .row{
+  display: flex;
+  align-items: center;
+}
+
+.cy-3col-cdn-div-section{
+background: linear-gradient(88.14deg, #1D3892 0.39%, #0C2050 99.57%);
+padding: 60px 0px;
+
+}
+
+.cy-3col-cdn-div-h3{
+  color: #fff;
+}
+
+.col-content-ctn-h4-3{
+  color: #FFBF00;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.col-content-ctn-p-3{
+  color: #F3F3F3;
+}
+
+.cy-3col-cdn-div-section-2{
+  margin-top: 30px;
+}
+
+#side-bor-idd{
+  border-right: 1px dotted #E7E7E7;
+}
+
+
+
+.col-content-ctn-3{
+  padding: 0px 25px;
+}
+/* cyper security page  end */
+
+
+
+  /* Background video green st */
+   
+
+    /* Gradient overlay */
+    .ispec-subb-pa-section-1::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+     background: linear-gradient(90deg,
+                              #6b91f5 0%,
+                              #5f65f8 45%,
+                              #8c6af8 100%);
+
+
+    
+      opacity: 0.90; /* adjust if you want more/less video visible */
+      z-index: -1;   /* above video, below content */
+    }
+
+     .ispec-subb-pa-section-1 {
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      z-index: 1;
+    }
+
+    /* Background video green end */
+
+
+
+    /* right side form chages st */
+
+     .ispec-subb-pa-form-1 {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      padding: 30px;
+    }
+.ispec-subb-pa-form-1 .form-control:focus {
+  border-color: #aad1aa;   
+  box-shadow: none;     
+  outline: none;                     
+}
+
+    .ispec-subb-pa-form-1 input,
+    .ispec-subb-pa-form-1 textarea {
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .ispec-subb-pa-btn-6 {
+      background: #1F3A9D;
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 25px;
+      font-weight: 600;
+      transition: 0.3s;
+      border: 1px solid c;
+    }
+    .ispec-subb-pa-btn-6:hover {
+      background: #fff;
+      border: 1px solid #1F3A9D;
+      color: #1F3A9D;
+    }
+
+    .ispec-subb-pa-btn-left-6 {
+      background: #fff;
+      color: #000;
+      border-radius: 50px;
+      padding: 12px 25px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .ispec-subb-pa-btn-left-6:hover {
+      background:#1F3A9D;
+      color: #fff;
+    }
+ /* right side form chages end */

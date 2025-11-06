@@ -1,0 +1,303 @@
+/* about page */
+/* about first img section */
+
+.isp-new-main-about-left-img{
+    width: 80%;
+display: flex;
+    margin: 0 auto;
+}
+
+.isp-new-main-about-divv-section{
+  
+    background-image: url(../images/ab-bac.png);
+    padding: 60px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.isp-new-main-about-divv-section .row{
+    display: flex;
+    align-items: center;
+}
+
+
+/* about counter section */
+#isb-counter-about-section-border{
+    border-right: 1px solid #8D5E0045;
+}
+
+.isb-counter-about-section{
+   margin-top: 90px;
+}
+
+.isb-counter-about-section .row{
+display: flex;
+align-items: center;
+}
+
+.isb-counter-about-section-ba{
+ background-color: #FFF6E4;
+    padding: 40px 0px;
+    border-radius: 30px;
+}
+.isb-counter-about-p{
+    text-align: center;
+    margin-top: 24px;
+    font-size: 20px;
+    margin-bottom: 0px;
+
+}
+
+.isb-counter-about-h3 {
+    position: relative; /* required for ::before absolute positioning */
+  text-align: center;
+    margin: 0 auto; /* help center inside parent */
+    padding-bottom: 10px;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.isb-counter-about-h3::before {
+    content: "";
+    position: absolute;
+    bottom: 0; /* place at bottom of text */
+    left: 50%; /* start from middle */
+    transform: translateX(-50%); /* perfectly center */
+    width: 40px;   /* underline length */
+    height: 2px;   /* thickness */
+    background-color: #BD9B56; /* underline color */
+    border-radius: 2px;
+}
+
+
+/* -- ===== About Slider Section Start ===== --  */
+
+
+  /* About Slider Section */
+    .isb-abouu-sluder-section {
+    background-image: url(../images/ab-bannwe.png);
+      color: #fff;
+      padding: 50px 0;
+      position: relative;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 130px;
+    }
+
+ .isb-abouu-sluder-section   .isb-abouu-sluder-title {
+      font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+ .isb-abouu-sluder-section   .isb-abouu-sluder-subtitle {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 20px;
+      color: #b3b3ff;
+    }
+
+  .isb-abouu-sluder-section  .isb-abouu-sluder-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #e0e0e0;
+    }
+
+   .isb-abouu-sluder-section .isb-abouu-sluder-image-wrapper {
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+   .isb-abouu-sluder-section .isb-abouu-sluder-image {
+      width: 85%;
+      margin: 0 auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    /* Carousel Controls */
+     .isb-abouu-sluder-section .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+    }
+
+  .isb-abouu-sluder-section  .carousel-indicators [data-bs-target] {
+      background-color: #b3b3ff;
+    }
+    
+    /* Custom swipe indicators */
+     .isb-abouu-sluder-section .swipe-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+    }
+    
+     .isb-abouu-sluder-section .swipe-indicator i {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 24px;
+    }
+    
+    @media (min-width: 768px) {
+     .isb-abouu-sluder-section .swipe-indicator {
+        display: none;
+      }
+    }
+/* -- ===== About Slider Section end ===== --  */
+
+
+/* about us page tab section st */
+.isbb-about-tab-section {
+      background: #fff;
+      font-family: "Inter", sans-serif;
+      margin-top: 60px;
+    }
+  .isbb-about-tab-section  .isbb-about-tab-nav .nav-link {
+      border-radius: 30px;
+      padding: 14px 35px;
+      font-weight: 500;
+      color: #5e2b85;
+    
+      margin: 0 6px;
+      transition: all 0.25s ease;
+      
+    }
+
+  .isbb-about-tab-section  .isbb-about-tab-nav{
+        border: 1px solid #BFBFBF;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0px 0px;
+    border-radius: 100px;
+    }
+ .isbb-about-tab-section   .isbb-about-tab-nav .nav-link.active {
+      background: linear-gradient(90deg, #c1277a, #7e2cbf);
+      color: #fff;
+       padding: 14px 35px;
+       margin: 0px;
+    }
+  .isbb-about-tab-section  .isbb-about-tab-title { font-weight: 600; margin-bottom: 18px; color: #111; }
+   .isbb-about-tab-section .isbb-about-tab-text  { color: #545454; margin-bottom: 20px; }
+  .isbb-about-tab-section  .isbb-about-tab-list { list-style: none; padding: 0; text-align:left; margin-top:12px; }
+ .isbb-about-tab-section   .isbb-about-tab-list li { margin-bottom: 10px; font-weight:500; color:#313131;
+    font-size: 18px;  }
+   .isbb-about-tab-section .isbb-about-tab-list i { color:#9c27b0; 
+        
+        
+        
+        
+        margin-right:8px; }
+
+   .isbb-about-tab-section .isbb-about-tab-image { margin-top: 28px; text-align:center; }
+ .isbb-about-tab-section   .isbb-about-tab-image img {
+      border-radius: 15px;
+      width: 70%;
+      max-width: 540px;
+      box-shadow: 0 12px 30px rgba(20,20,50,0.08);
+      transition: opacity .35s ease;
+      opacity: 1;
+     
+    }
+
+  .isbb-about-tab-section  .isbb-about-tab-content .row{
+        display: flex;
+        align-items: center;
+    }
+
+   .isbb-about-tab-section .isbb-about-tab-list-imh{
+        padding-right: 10px;
+    }
+
+  .isbb-about-tab-section .isbb-about-tab-section-h3f{
+text-align: center;
+margin-bottom: 40px;
+color: #313131;
+font-size: 32px;
+font-weight: 600;
+   }
+
+  .isbb-about-tab-section .isbb-about-tab-body{
+    padding:0px 30px ;
+   }
+
+/* about us page tab section end */
+
+
+/* about page tob back video section st */
+
+ /* Unique Topbar Section */
+    .ispp-abb-topba {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+
+      /* Gradient background */
+      background: linear-gradient(to right, #7f00ff, #e100ff, #ff6a00, #f9d423);
+    }
+
+    /* Background Video with Strong Zoom Effect */
+    .ispp-abb-topba video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;   /* Blend video with gradient */
+      z-index: 0;
+
+      /* Zoom animation */
+      transform: scale(1);
+      animation: videoZoom 20s infinite;
+    }
+
+    /* Keyframes for zoom effect */
+    @keyframes videoZoom {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.5); /* Zoom in up to 140% */
+      }
+    }
+
+    /* Content on Top */
+    .ispp-abb-topba .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Breadcrumb */
+    .ispp-abb-topba .breadcrumb {
+      background: transparent;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+
+    .ispp-abb-topba h2 {
+      font-size: 42px;
+      font-weight: 700;
+    }
+
+    .abbou-tob-isb{
+      color: #fff;
+      text-decoration: none;
+    }
+    .breadcrumb-item+.breadcrumb-item::before{
+      color: #ffc107;
+    }
+.isp-new-main-about-ri-p{
+  margin-top: 18px;
+  width: 85%;
+}
+    /* about page tob back video section end */

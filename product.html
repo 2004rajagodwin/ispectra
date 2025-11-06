@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    
+<section class="rcm-edge-fst-section">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="rcm-edge-fst-section-left">
+<h3 class="rcm-edge-fst-section-left-h3">Why Choose RCMEdge</h3>
+<p class="rcm-edge-fst-section-left-p">RCMEdge is designed to simplify and transform the way healthcare providers manage their revenue cycles. By combining AI-powered automation with intelligent workflows, it reduces manual errors, speeds up reimbursements, and minimizes claim denials. The platform integrates seamlessly with leading EHR and billing systems, ensuring a smooth transition without disrupting existing processes. Built with HIPAA-compliant security standards, RCMEdge guarantees the safety of sensitive healthcare data while delivering real-time insights that empower providers to make smarter financial decisions. Whether you are a small clinic or a large hospital network, RCMEdge scales with your needs, helping you achieve efficiency, compliance, and sustainable revenue growth.
+
+</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="rcm-edge-fst-section-right">
+<img class="rcm-edge-fs-right-img" src="images/productisb.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+
+
+<section class="isb-pro-coun-section ">
+  <div class="container">
+    <div class="row justify-content-center align-items-center text-center g-0">
+      
+      <!-- Heading -->
+      <div class="col-12">
+        <h3 class="isb-pro-coun-title ">
+          Redefining Revenue Cycle Management
+        </h3>
+      </div>
+
+      <!-- Counter 1 -->
+      <div class="col-md isb-pro-coun-col" id="pro-isb-sec-border">
+        <h2 class="isb-pro-coun-num">25+</h2>
+        <p class="isb-pro-coun-text">
+          Leading U.S. health systems trust RCME
+        </p>
+      </div>
+
+      <!-- Counter 2 -->
+      <div class="col-md isb-pro-coun-col" id="pro-isb-sec-border">
+        <h2 class="isb-pro-coun-num">98%</h2>
+        <p class="isb-pro-coun-text">
+          Year-over-year customer satisfaction rate
+        </p>
+      </div>
+
+      <!-- Counter 3 -->
+      <div class="col-md isb-pro-coun-col" id="pro-isb-sec-border">
+        <h2 class="isb-pro-coun-num">43%</h2>
+        <p class="isb-pro-coun-text">
+          Average identification hit rate on accounts
+        </p>
+      </div>
+
+      <!-- Counter 4 -->
+      <div class="col-md isb-pro-coun-col" id="pro-isb-sec-border">
+        <h2 class="isb-pro-coun-num">3B+</h2>
+        <p class="isb-pro-coun-text">
+          Claims and remittances processed annually
+        </p>
+      </div>
+
+      <!-- Counter 5 -->
+      <div class="col-md isb-pro-coun-col">
+        <h2 class="isb-pro-coun-num">99.9%</h2>
+        <p class="isb-pro-coun-text">
+          HIPAA-compliant data security 
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!---product counter script-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".isb-pro-coun-num");
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          counters.forEach(counter => {
+            const originalText = counter.innerText.trim();
+            const target = parseInt(originalText.replace(/[^\d]/g, '')) || 0;
+            const hasPlus = originalText.includes('+');
+            const hasPercent = originalText.includes('%');
+            const hasB = originalText.toLowerCase().includes('b');
+
+            let count = 0;
+            const increment = target / 100;
+
+            const updateCounter = () => {
+              count += increment;
+              if (count < target) {
+                counter.innerText = 
+                  hasPercent ? `${Math.ceil(count)}%` :
+                  hasB ? `${Math.ceil(count)}B` + (hasPlus ? '+' : '') :
+                  `${Math.ceil(count)}` + (hasPlus ? '+' : '');
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.innerText = originalText; // restore exact text
+              }
+            };
+
+            updateCounter();
+          });
+
+          hasAnimated = true;
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const section = document.querySelector(".isb-pro-coun-section");
+    if (section) observer.observe(section);
+  });
+</script>
+
+<!--- isb-product video section -->
+
+<section class="isp-pro-video-section">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      
+      <!-- Heading -->
+      <div class="col-12">
+        <h3 class="isp-pro-video-title">Experience Smarter RCM</h3>
+      </div>
+
+      <!-- Video Box -->
+      <div class="col-12">
+        <div class="isp-pro-video-wrapper">
+          <video class="isp-pro-video" autoplay muted loop playsinline>
+            <source src="images/RCM_Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+
+        
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- isb- product page tab section -->
+
+<section class="isbb-uniqu-tab-section">
+  <div class="container">
+    <h3 class="isbb-uniqu-tab-section-h3">Transforming Challenges into Opportunities</h3>
+    <div class="row">
+      
+      <!-- Left Tabs -->
+      <div class="col-md-3">
+        <div class="isbb-uniqu-tab-menu">
+          <button class="isbb-tab-btn active" data-target="#isbb-tab-1">Faster Reimbursements</button>
+          <button class="isbb-tab-btn" data-target="#isbb-tab-2">Reduced Denials</button>
+          <button class="isbb-tab-btn" data-target="#isbb-tab-3">Actionable Insights</button>
+          <button class="isbb-tab-btn" data-target="#isbb-tab-4">Seamless Integration</button>
+          <button class="isbb-tab-btn" data-target="#isbb-tab-5">Scalable & Secure</button>
+        </div>
+      </div>
+
+      <!-- Right Tab Content -->
+      <div class="col-md-9">
+        <div class="isbb-uniqu-tab-content">
+
+          <!-- Tab 1 -->
+          <div class="isbb-tab-pane active" id="isbb-tab-1">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 class="isbb-tab-title">Faster Reimbursements</h4>
+                <p class="isbb-tab-text">
+                  With iSpectra, providers can accelerate their revenue cycle by eliminating manual bottlenecks and reducing errors in claim processing.
+                  AI-powered automation ensures claims are submitted correctly the first time, leading to fewer denials and faster turnaround times.
+                </p>
+                <div class="row g-2">
+                  <div class="col-md-4"><div class="isbb-feature-box">AI-driven claim processing for quicker payouts</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">Fewer errors and rejections with automated workflows</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">Improved cash flow and reduced payment delays</div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="images/tab-pro.png" alt="Faster Reimbursements" class="isbb-tab-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="isbb-tab-pane" id="isbb-tab-2">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 class="isbb-tab-title">Reduced Denials</h4>
+                <p class="isbb-tab-text">
+                  Our intelligent claim validation system detects missing data and coding errors before submission.
+                  This proactive approach reduces costly denials and ensures providers get paid the first time.
+                </p>
+                <div class="row g-2">
+                  <div class="col-md-4"><div class="isbb-feature-box">Real-time eligibility verification</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">Automated coding compliance checks</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">Faster denial resolution workflows</div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="images/tab-pro.png" alt="Reduced Denials" class="isbb-tab-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="isbb-tab-pane" id="isbb-tab-3">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 class="isbb-tab-title">Actionable Insights</h4>
+                <p class="isbb-tab-text">
+                  Gain visibility into your revenue cycle with powerful analytics. Our dashboards provide real-time insights
+                  into claim trends, payer performance, and revenue leakage, helping providers make data-driven decisions.
+                </p>
+                <div class="row g-2">
+                  <div class="col-md-4"><div class="isbb-feature-box">Customizable analytics dashboards</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">Predictive reporting tools</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">KPI tracking for better performance</div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="images/tab-pro.png" alt="Actionable Insights" class="isbb-tab-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4 -->
+          <div class="isbb-tab-pane" id="isbb-tab-4">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 class="isbb-tab-title">Seamless Integration</h4>
+                <p class="isbb-tab-text">
+                  Easily integrate our RCM solution with your existing EHR, billing, and practice management systems.
+                  Enjoy smooth workflows without disruption to your current processes.
+                </p>
+                <div class="row g-2">
+                  <div class="col-md-4"><div class="isbb-feature-box">Plug-and-play integrations</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">API-enabled interoperability</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">Minimal IT dependency</div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="images/tab-pro.png" alt="Seamless Integration" class="isbb-tab-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5 -->
+          <div class="isbb-tab-pane" id="isbb-tab-5">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 class="isbb-tab-title">Scalable & Secure</h4>
+                <p class="isbb-tab-text">
+                  Our cloud-based RCM platform is built to scale with your practice growth.
+                  With enterprise-grade security and compliance, your data is always safe.
+                </p>
+                <div class="row g-2">
+                  <div class="col-md-4"><div class="isbb-feature-box">HIPAA-compliant architecture</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">Enterprise-level scalability</div></div>
+                  <div class="col-md-4"><div class="isbb-feature-box">99.9% uptime reliability</div></div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="imagestab-pro.png" alt="Scalable & Secure" class="isbb-tab-img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<script>
+    document.querySelectorAll('.isbb-tab-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.isbb-tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.isbb-tab-pane').forEach(pane => pane.classList.remove('active'));
+
+    button.classList.add('active');
+    const target = document.querySelector(button.getAttribute('data-target'));
+    target.classList.add('active');
+  });
+});
+
+</script>
+
+
+<!-- parner -3rd section -->
+
+<section class="isp-product-tird-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="isp-product-tird-left">
+<h3 class="isp-product-tird-left-h3">Trusted Partnership, Proven Outcomes</h3>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="isp-product-tird-right">
+<img class="isp-product-tird-right-imgg" src="images/pro-isb.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- product edge fan section-->
+
+
+<section class="iso-edge-produ-fan-section">
+    <div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <div class="iso-edge-produ-fan-left"> 
+
+<h3 class="iso-edge-produ-fan-left-h3">What RCMEdge Covers for You</h3>
+<p class="iso-edge-produ-fan-left-p">RCMEdge takes care of the entire revenue cycle management process so providers can focus on delivering quality care. From claim creation to payment collection, iSpectra ensures accuracy, compliance, and efficiency every step of the way.
+
+</p>
+<h5 class="iso-edge-produ-fan-left-h5">Key Coverage Areas</h5>
+<p class="iso-edge-produ-fan-left-p">RCMEdge covers the entire revenue cycle with accuracy and ease. It streamlines claims management through automated creation and submission, while denial management helps catch errors early and reduce rejections. With real-time analytics, providers get clear insights into financial performance. Seamless integrations ensure smooth connectivity with EHRs and billing systems, while HIPAA-compliant security keeps sensitive data safe. Finally, payment posting and collections speed up reimbursements and provide full transparency.
+
+</p>
+        </div>
+    </div>
+
+<div class="col-md-6">
+  <div class="iso-edge-produ-fan-right">
+
+    <div class="iso-edge-produ-fan-right-div">
+      <!-- Rotating Image -->
+      <img class="iso-edge-produ-fan-right-div-img" src="images/fan-pro-2.png" alt="">
+
+      <!-- Fixed Content -->
+       <div class="fan-content-1 integration-1"><img class="faan-cen-iconimg" src="images/fan-icon-isp.png" alt=""></div>
+      <div class="fan-content integration-ip"><p class="fan-pro-sec-ptag">Integration Support</p></div>
+      <div class="fan-content compliance-ip"><p class="fan-pro-sec-ptag">Compliance & Security</p></div>
+      <div class="fan-content claims-ip"><p class="fan-pro-sec-ptag">Claims Management</p></div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+    </div>
+</section>
+
+
+
+<!-- fan animation popup script -->
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const fanContents = document.querySelectorAll(".fan-content");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = "transform 0.7s ease, opacity 0.7s ease";
+        entry.target.style.transform = "scale(1)";
+        entry.target.style.opacity = "1";
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  fanContents.forEach(fan => {
+    fan.style.transform = "scale(0.5)"; // initial scale
+    fan.style.opacity = "0"; // initial opacity
+    observer.observe(fan);
+  });
+});
+</script>
+
+</body>
+</html>

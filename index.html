@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iSpectra Growth Section with Animated Graph</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+<!-- ice fst banner section  -->
+
+   <!-- ice fst banner section -->
+  <section class="ispec-subb-pa-section">
+    <!-- Background Video -->
+    <video class="ispec-subb-pa-video" autoplay muted loop>
+      <source src="images/0_Minimalist_Twist_1280x720.mp4" type="video/mp4">
+    </video>
+
+    <div class="container py-5">
+      <div class="row align-items-center">
+        
+        <!-- Left Content -->
+        <div class="col-md-7">
+          <div class="ispec-subb-pa-content">
+            <p class="mb-2">
+              <a href="index.html" class="ice-fst-span-ser"><i class="bi bi-house-door-fill"></i>Home</a> /
+              <span class="ice-fst-span-ser-1">Custom Software Engineering</span>
+            </p>
+
+            <h1 class="ice-new-hh-fd">
+              Enhancing your Business <br>
+              Through Secure & Intelligent <br>
+              Software Development
+            </h1>
+            <p class="isb-fst-secv-p">
+              iSpectra Technologies provides custom-built software solutions supported by 
+              cybersecurity, cloud innovation, and high-standard techniques to transform your 
+              business to indescribable growth.
+            </p>
+            <div class="ispec-subb-pa-btn-div">
+              <a href="#" class="ispec-subb-pa-btn-1">Get started now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="col-md-5">
+          <div class="ispec-subb-pa-form">
+            <h5 class="right-hee-f">Registration Information</h5>
+            <form>
+              <input type="text" class="form-control" placeholder="Name" required>
+              <input type="email" class="form-control" placeholder="Email Id" required>
+              <input type="text" class="form-control" placeholder="Mobile Number" required>
+              <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+              <button type="submit" class="btn w-100 mt-3 ispec-subb-pa-btn">Enquire Now</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+     <!-- ice fst graph section  st-->
+
+ <section class="ispec-subb-gra-section">
+
+
+
+
+
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Content -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <p class="ispec-subb-gra-tag">WHY IT MATTERS</p>
+        <h2 class="ispec-subb-gra-heading">How ISpectra’s Services Help Your Business Grow</h2>
+        <p class="ispec-subb-gra-text">
+          Technology is not only a tool but also the backbone of corporate success.
+          Sometimes the process fails due to fragmented systems with unsupportive 
+          protection. At ISpectra Technologies, we design & develop intelligent and safe 
+          software systems that work effortlessly. We combine streamlined execution and 
+          custom software engineering into one single, powerful platform. Working with us, 
+          you get efficient operations, safe data, and infrastructure that enables your 
+          organization to remain completely future-ready.
+        </p>
+      </div>
+      <!-- Right Graph -->
+      <div class="col-md-6">
+        <div class="ispec-subb-gra-card">
+          <h5 class="mb-ice-gr-h55">The Results That Matter</h5>
+          <div class="ispec-subb-gra-graph">
+            <div class="ispec-subb-gra-bar ispec-subb-gra-bar1"><span>20%</span></div>
+            <div class="ispec-subb-gra-bar ispec-subb-gra-bar2"><span>42%</span></div>
+            <div class="ispec-subb-gra-bar ispec-subb-gra-bar3"><span>55%</span></div>
+            <div class="ispec-subb-gra-bar ispec-subb-gra-bar4"><span>38%</span></div>
+            <div class="ispec-subb-gra-bar ispec-subb-gra-bar5"><span>25%</span></div>
+          </div>
+          <div class="ispec-subb-gra-labels">
+            <p class="ispec-subb-gra-label1">Faster Operations</p>
+            <p class="ispec-subb-gra-label2">Higher Productivity</p>
+            <p class="ispec-subb-gra-label3">Better Customer Experience</p>
+            <p class="ispec-subb-gra-label4">Smarter Decisions</p>
+            <p class="ispec-subb-gra-label5">Sustainable Growth</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Scroll-triggered animation
+  const bars = document.querySelectorAll('.ispec-subb-gra-bar');
+  const labels = document.querySelector('.ispec-subb-gra-labels');
+
+  function animateBars() {
+    const section = document.querySelector('.ispec-subb-gra-section');
+    const rect = section.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100) { // when section is in viewport
+      bars.forEach((bar, i) => {
+        bar.style.animation = `growBar 1.5s ease-out forwards ${i*0.2}s`;
+        const span = bar.querySelector('span');
+        span.style.animation = `fadeIn 0.5s ease-out forwards ${1 + i*0.2}s`;
+      });
+      labels.style.animation = `fadeIn 0.8s ease-out forwards 2.2s`;
+      window.removeEventListener('scroll', animateBars);
+    }
+  }
+
+  window.addEventListener('scroll', animateBars);
+  // trigger if section is already visible
+  animateBars();
+</script>
+
+<!-- why our software section-->
+
+
+
+<section class="our-soft-ice-section">
+<div class="container">
+
+    <div class="ispec-subb-gra-tag-1div"><p  class="ispec-subb-gra-tag-1">What We Offer</p></div>
+    <h3  class="our-soft-ice-section-h3">Our Software Engineering Services</h3>
+    <p  class="our-soft-ice-section-pp">Here's how we add value at each step of your software journey, designed with innovation, security, and performance in mind.</p>
+    <div class="row">
+        <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka1.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">Custom Software Development</h5>
+<p class="our-soft-ice-p">Solutions that are specifically designed for you, combining strong security with innovative design to enable your company to expand rapidly.
+
+</p>
+</div>
+        </div>
+         <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/kl1.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">Web Application Development</h5>
+<p class="our-soft-ice-p">Mobile-first, scalable web apps that are developed securely and with agile methodologies to provide outstanding user experiences
+
+</p>
+</div>
+        </div>
+         <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka2.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">Enterprise Application Integration</h5>
+<p class="our-soft-ice-p">Connect your systems effortlessly for more efficient operations, smarter workflows, and improved data flow throughout your organisation.
+
+</p>
+</div>
+        </div>
+         <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka1.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">DevOps
+Services</h5>
+<p class="our-soft-ice-p"> DevOps, automated pipelines, continuous deployment, & collaboration can help you accelerate innovation while keeping your team and software reliable.
+
+</p>
+</div>
+        </div>
+    </div>
+
+<!-- second row col-->
+
+<div class="ice-eng-second-roww">
+ <div class="row">
+        <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka4.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">Application Maintenance & Support</h5>
+<p class="our-soft-ice-p">Our assistance does not end with the launch of your software; we continue to ensure that it runs properly and evolves in response to your business demands.
+
+</p>
+</div>
+        </div>
+        <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka5.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">Database Design & Management</h5>
+<p class="our-soft-ice-p"> Smart, scalable database architecture that manages your data efficiently, securely, and easily
+
+</p>
+</div>
+        </div>
+        <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka6.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">API Development & Integration</h5>
+<p class="our-soft-ice-p"> Powerful APIs that easily connect your software components, enabling seamless data sharing and interoperability.
+
+</p>
+</div>
+        </div>
+        <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka7.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">Technology
+Consulting</h5>
+<p class="our-soft-ice-p">Professional guidance to match your IT investments with your business objectives, delivering clarity and direction to every project
+
+</p>
+</div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- 3rd row col-->
+
+<div class="ice-eng-second-roww">
+ <div class="row">
+        <div class="col-md-3">
+<div class="our-soft-ice-section-col-main">
+<div class="our-soft-ice-imgdiv">
+    <img class="our-soft-ice-img" src="images/ka8.png" alt="">
+</div>
+
+
+<h5 class="our-soft-ice-h5">Agile
+Development</h5>
+<p class="our-soft-ice-p">Maintain flexibility and responsiveness. Our agile approach produces software in manageable sprints, with real-time feedback and high quality.
+
+</p>
+</div>
+        </div>
+        
+<div class="col-md-9">
+<div class="ice-endg-se-cta-ri">
+<h3 class="ice-endg-se-cta-ri-h3">Ready to Build Custom Software That Drives Results?</h3>
+
+<div  class="ice-endg-se-cta-ri-div">
+    <a  class="ice-endg-se-cta-ri-a" href="">Get started now <i class="bi bi-chevron-right"></i></a>
+</div>
+</div>
+</div>
+
+
+        
+    </div>
+</div>
+
+
+
+</div>
+</section>
+
+<!-- cta section-->
+
+<section class="cta-ice-main-section-2">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="cta-ice-main-section-main">
+<h3 class="cta-ice-main-section-main-h3">Looking for a Reliable Software Engineering Partner?</h3>
+<p class="cta-ice-main-section-main-p">ISpectra Technologies delivers scalable, secure, and high-performance software solutions tailored to your business goals.</p>
+
+
+<div class="cta-ice-main-section-maindiv">
+  <a class="cta-ice-main-section-main-diva" href="">Contact Us <i class="bi bi-chevron-right"></i></a>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+<!-- marque logo section -->
+
+<section class="ice-new-marque-slide-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        
+        <div class="ice-new-mark-log-wrapper">
+           <div  class="ispec-subb-gra-tag-1div">
+             <p  class="ispec-subb-gra-tag-1">What We Offer</p>
+           </div>
+          <h2 class="ice-new-mark-log-heading">Innovation Backed by Strong Tech</h2>
+
+          <!-- FIRST LINE: left-to-right movement -->
+          <div class="ice-new-mark-log-track ice-new-mark-log-anim-ltr">
+            <div class="ice-new-mark-log-scroller">
+              <div class="ice-new-mark-log-item-group">
+                <div class="ice-new-mark-log-item"><img src="images/oi1.png" alt="Android"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi2.png" alt="PHP"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi3.png" alt="MySQL"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi4.png" alt="C++"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi5.png" alt="CSS3"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi6.png" alt="WordPress"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi7.png" alt="HTML5"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi8.png" alt="React"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi9.png" alt="Ruby"></div>
+              </div>
+              <div class="ice-new-mark-log-item-group" aria-hidden="true">
+                <div class="ice-new-mark-log-item"><img src="images/oi1.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi2.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi3.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi4.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi5.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi6.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi7.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi8.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi9.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECOND LINE: right-to-left movement -->
+          <div class="ice-new-mark-log-track ice-new-mark-log-anim-rtl" style="margin-top:14px;">
+            <div class="ice-new-mark-log-scroller">
+              <div class="ice-new-mark-log-item-group">
+                <div class="ice-new-mark-log-item"><img src="images/oi10.png" alt="TypeScript"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi11.png" alt="Swift"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi12.png" alt="Java"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi13.png" alt="Python"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi1.png" alt="AWS"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi2.png" alt="JavaScript"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi3.png" alt="Flutter"></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi9.png" alt="Django"></div>
+              </div>
+              <div class="ice-new-mark-log-item-group" aria-hidden="true">
+                <div class="ice-new-mark-log-item"><img src="images/oi10.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi11.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi12.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi13.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi1.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi2.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi3.png" alt=""></div>
+                <div class="ice-new-mark-log-item"><img src="images/oi9.png" alt=""></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- how we work why choose us section-->
+
+
+<section class="isp-soft-deb-process-section">
+<div class="container">
+   
+      <div class="row">
+        <!-- Left Section - col-md-6 -->
+        <div class="col-md-6">
+          <div class="isp-soft-deb-left-section">
+            <p class="ispec-subb-gra-tag-3">How We Work</p>
+            <h3 class="isp-soft-deb-left-section-h3">Our Comprehensive Software Development Process</h3>
+            <p class="isp-soft-deb-left-section-p">We follow a structured approach to ensure your project is delivered on time, within budget, and meets all your requirements.</p>
+            <div class="isp-nde-des-igdiv">
+              <img class="isp-nde-des-img" src="images/Rectangle 736.png" alt="Software Development Process">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section - col-md-6 -->
+        <div class="col-md-6">
+          <div class="isp-soft-deb-right-section">
+            <div class="isp-soft-deb-center-border"></div>
+
+            <div class="isp-soft-deb-steps-container">
+              <!-- Step 1 (Blue) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-blue">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-blue">
+                    <i class="fas fa-calendar-alt"></i> 1 - 30 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-blue">
+                          <img src="images/kj1.png" alt="Discovery Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-blue">Strategic Discovery</h5>
+                            <span class="step-number">Step 01</span>
+                          </div>
+                          <p class="pp-ivce-right">Understand goals, users, and company obstacles with collaborative workshops and in-depth research to gain practical insights.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2 (Purple) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-purple">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-purple">
+                    <i class="fas fa-calendar-alt"></i> 90 - 120 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-purple">
+                          <img src="images/kj111.png" alt="Testing Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-purple">Automated Testing & QA</h5>
+                            <span class="step-number">Step 02</span>
+                          </div>
+                          <p class="pp-ivce-right">Implement comprehensive testing strategies including unit tests, integration tests, and end-to-end testing to ensure software quality and reliability.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Step 3 (Sky Blue) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-skyblue">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-skyblue">
+                    <i class="fas fa-calendar-alt"></i> 60 - 90 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-skyblue">
+                          <img src="images/kj2.png" alt="Development Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-skyblue">Web Development</h5>
+                            <span class="step-number">Step 03</span>
+                          </div>
+                          <p class="pp-ivce-right">Build robust, scalable web applications using modern technologies and best practices to ensure high performance and security.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4 (Red) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-red">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-red">
+                    <i class="fas fa-calendar-alt"></i> 30 - 60 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-red">
+                          <img src="images/kj3.png" alt="Design Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-red">UX-Driven Design</h5>
+                            <span class="step-number">Step 04</span>
+                          </div>
+                          <p class="pp-ivce-right">Create intuitive, user-friendly interfaces that improve experiences through research, usability testing, and design innovation.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Step 5 (Green) - CI/CD & DevOps Delivery -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-green">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-green">
+                    <i class="fas fa-calendar-alt"></i> 120 - 150 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-green">
+                          <img src="images/kj4.png" alt="DevOps Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-green">CI/CD & DevOps Delivery</h5>
+                            <span class="step-number">Step 05</span>
+                          </div>
+                          <p class="pp-ivce-right">Implement continuous integration and continuous deployment pipelines with DevOps practices to ensure reliable and efficient software delivery.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Step 6 (Orange) - Post-Launch Optimization -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-orange">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-orange">
+                    <i class="fas fa-calendar-alt"></i> 150 - 180 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-orange">
+                          <img src="images/kj5.png" alt="Optimization Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-orange">Post-Launch Optimization</h5>
+                            <span class="step-number">Step 06</span>
+                          </div>
+                          <p class="pp-ivce-right">Continuously monitor, analyze, and optimize the application post-launch to improve performance, user experience, and business outcomes.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- steps container -->
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  </section>
+
+<!-- cta section-2-->
+
+
+<section class="cta-ice-main-section">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="cta-ice-main-section-main">
+<h3 class="cta-ice-main-section-main-h3">Ready to transform your ideas into powerful software?</h3>
+<p class="cta-ice-main-section-main-p">ISpectra's intelligent, customer-focused solutions are designed to have a long-term impact and unlock growth potential</p>
+
+
+<div class="cta-ice-main-section-maindiv">
+  <a class="cta-ice-main-section-main-diva" href="">Contact Us <i class="bi bi-chevron-right"></i></a>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+
+
+
+
+<!-- industry spesific solution background image section -->
+
+<section class="isp-sub-pa-nee-section">
+  <div class="container">
+    <div class="isp-sub-pa-nee-top-headiv">
+      <h3 class="isp-sub-pa-nee-top-headiv-h3">Industry Specific Solutions</h3>
+      <p class="isp-sub-pa-nee-top-headiv-p">
+        Every industry faces unique challenges—we understand that. At ISpectra, we provide every software aligned with cybersecurity testing and custom digital solutions to address your unique challenges, streamline processes, and drive growth.
+      </p>
+    </div>
+  </div>
+
+  <!-- col-div section-->
+  <div class="container isp-sub-pa-nee-container" id="ispSubPaNeeBg">
+    <div class="isp-sub-pa-nee-overlay"></div>
+    <div class="row g-0 isp-sub-pa-nee-grid">
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac-1.jpg">
+        <div class="isp-sub-pa-nee-title">Logistics & Transportation</div>
+        <div class="isp-sub-pa-nee-desc">Real-time tracking, automatic dispatching, route optimisation, and efficient driver management technologies can help you streamline your logistics operations.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac2.jpg">
+        <div class="isp-sub-pa-nee-title">Healthcare</div>
+        <div class="isp-sub-pa-nee-desc">Smart healthcare solutions for patients & providers.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac3.jpg">
+        <div class="isp-sub-pa-nee-title">Retail & E-commerce</div>
+        <div class="isp-sub-pa-nee-desc">Omnichannel solutions & inventory optimization.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac4.jpg">
+        <div class="isp-sub-pa-nee-title">Education & E-learning</div>
+        <div class="isp-sub-pa-nee-desc">Accessible and interactive online learning tools.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac5.jpg">
+        <div class="isp-sub-pa-nee-title">Finance, Banking & Insurance</div>
+        <div class="isp-sub-pa-nee-desc">Secure financial platforms and smart banking tools.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac6.jpg">
+        <div class="isp-sub-pa-nee-title">Manufacturing</div>
+        <div class="isp-sub-pa-nee-desc">Automation & smart manufacturing solutions.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac7.jpg">
+        <div class="isp-sub-pa-nee-title">Travel & Hospitality</div>
+        <div class="isp-sub-pa-nee-desc">Travel tech to enhance guest experience.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac8.jpg">
+        <div class="isp-sub-pa-nee-title">Real Estate & Construction</div>
+        <div class="isp-sub-pa-nee-desc">Digital real estate & construction management.</div>
+      </div>
+
+      <div class="col-md-4 isp-sub-pa-nee-item" data-bg="images/ac9.jpg">
+        <div class="isp-sub-pa-nee-title">Media & Entertainment</div>
+        <div class="isp-sub-pa-nee-desc">Streaming, broadcasting & immersive media.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const ispSubPaNeeBg = document.getElementById("ispSubPaNeeBg");
+  const ispSubPaNeeItems = document.querySelectorAll(".isp-sub-pa-nee-item");
+
+  // Set default background on page load
+  ispSubPaNeeBg.style.backgroundImage = "url('../ispectra-sub/images/ac-1.jpg')";
+
+  ispSubPaNeeItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      const bg = item.getAttribute("data-bg");
+      ispSubPaNeeBg.style.backgroundImage = `url('${bg}')`;
+    });
+    item.addEventListener("mouseleave", () => {
+      ispSubPaNeeBg.style.backgroundImage = "url('../ispectra-sub/images/ac-1.jpg')";
+    });
+  });
+</script>
+
+
+
+<!---WHY CHOOOSE BOX SLIDER -->
+ <section class="ise-new-dif-slider-section">
+   <div class="unique-main-container">
+     <div class="isb-uni-slii-ma-div">
+       <h2 class="ispe-blog-newsection-h3">Why Choose ISpectra Technologies</h2>
+       <p class="isp-sub-pa-nee-top-headiv-p">At ISpectra, we combine strategy and innovation to produce measurable results.</p>
+     </div>
+
+    <div class="unique-row row">
+      <!-- Left Column - Cards -->
+      <div class="unique-left-col col-md-7">
+        <div class="unique-card-container">
+          <!-- Row 1 -->
+          <div class="unique-row-1 row">
+            <div class="col-md-4">
+              <div class="unique-card unique-green">
+                <h2 class="unique-isb-h2">98%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">SLA Compliance:</span> Reliable protection and delivery.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-blue">
+                <h2 class="unique-isb-h2">99%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">System/Service Uptime:</span> Zero downtime security.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-purple">
+                <h2 class="unique-isb-h2">80%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">Utilization Rate:</span> Efficient resource usage.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 2 -->
+          <div class="unique-row-2 row">
+            <div class="col-md-4">
+              <div class="unique-card unique-yellow">
+                <h2 class="unique-isb-h2">10 Ta</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">Defects (per 1000 Tests):</span> Low error rate.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-pink">
+                <h2 class="unique-isb-h2">18 Hrs</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">MTTR:</span> Quick recovery.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-pink">
+                <h2 class="unique-isb-h2">100%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">Faster AI-Powered Response:</span> Smart defense.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 3 - Thumbnails -->
+          <div class="unique-row-3 row">
+            <div class="col-md-4">
+              <div class="unique-thumbnail active" data-slide="0">
+                <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Team Meeting">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-thumbnail" data-slide="1">
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Discussion">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-thumbnail" data-slide="2">
+                <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg" alt="Coding">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column - Image Slider -->
+      <div class="col-md-5">
+       <div class="unique-right-col">
+         <div class="unique-image-slider">
+          <!-- Slide 1 -->
+          <div class="unique-slide active">
+            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Team Meeting">
+          </div>
+          <!-- Slide 2 -->
+          <div class="unique-slide">
+            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Discussion">
+          </div>
+          <!-- Slide 3 -->
+          <div class="unique-slide">
+            <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg" alt="Coding">
+          </div>
+          <!-- Slider Controls -->
+          <div class="unique-slider-controls">
+            <button class="unique-slider-btn" id="unique-prevBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="unique-slider-btn" id="unique-nextBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const uniqueSlides = document.querySelectorAll('.unique-slide');
+      const uniqueThumbnails = document.querySelectorAll('.unique-thumbnail');
+      const uniquePrevBtn = document.getElementById('unique-prevBtn');
+      const uniqueNextBtn = document.getElementById('unique-nextBtn');
+      
+      let uniqueCurrentSlide = 0;
+      let isAutoSliding = true;
+      let slideInterval;
+
+      function showUniqueSlide(index, animationType = 'fade') {
+        uniqueSlides.forEach(slide => slide.classList.remove('slide-left', 'slide-right', 'active'));
+        uniqueThumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));
+
+        if (animationType === 'slide') {
+          const direction = index > uniqueCurrentSlide ? 'slide-left' : 'slide-right';
+          uniqueSlides[index].classList.add(direction);
+        }
+
+        uniqueSlides[index].classList.add('active');
+        uniqueThumbnails[index].classList.add('active');
+        uniqueCurrentSlide = index;
+      }
+
+      function nextUniqueSlide() {
+        let index = uniqueCurrentSlide + 1;
+        if (index >= uniqueSlides.length) index = 0;
+        showUniqueSlide(index, 'fade');
+      }
+
+      function prevUniqueSlide() {
+        let index = uniqueCurrentSlide - 1;
+        if (index < 0) index = uniqueSlides.length - 1;
+        showUniqueSlide(index, 'fade');
+      }
+
+      function startAutoSlide() {
+        slideInterval = setInterval(() => {
+          if (isAutoSliding) nextUniqueSlide();
+        }, 5000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(slideInterval);
+      }
+
+      uniqueNextBtn.addEventListener('click', function() {
+        isAutoSliding = false;
+        stopAutoSlide();
+        nextUniqueSlide();
+        setTimeout(startAutoSlide, 10000);
+      });
+
+      uniquePrevBtn.addEventListener('click', function() {
+        isAutoSliding = false;
+        stopAutoSlide();
+        prevUniqueSlide();
+        setTimeout(startAutoSlide, 10000);
+      });
+
+      uniqueThumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          isAutoSliding = false;
+          stopAutoSlide();
+          const slideIndex = parseInt(this.getAttribute('data-slide'));
+          showUniqueSlide(slideIndex, 'slide');
+          setTimeout(startAutoSlide, 10000);
+        });
+      });
+
+      startAutoSlide();
+    });
+  </script>
+<!-- counter script -->
+ <!-- Counter Animation Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".unique-isb-h2");
+    let hasAnimated = false;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasAnimated) {
+          counters.forEach(counter => {
+            const originalText = counter.innerText.trim();
+            const target = parseInt(originalText.replace(/[^\d]/g, ""), 10);
+            const prefix = originalText.match(/^\D*/)?.[0] || ""; // text before number
+            const suffix = originalText.match(/\D*$/)?.[0] || ""; // text after number
+
+            let count = 0;
+            const increment = target / 100;
+
+            const updateCounter = () => {
+              count += increment;
+              if (count < target) {
+                counter.innerText = `${prefix}${Math.ceil(count)}${suffix}`;
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.innerText = `${prefix}${target}${suffix}`;
+              }
+            };
+
+            updateCounter();
+          });
+
+          hasAnimated = true;
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    const section = document.querySelector(".ise-new-dif-slider-section");
+    if (section) observer.observe(section);
+  });
+</script>
+
+  
+
+<!-- testimoniel section -->
+
+<section class="ise-new-ser-testi-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Left Content -->
+        <div class="col-md-5">
+          <div class="ise-new-ser-testi-left"> 
+ <h5>Testimonial</h5>
+          <h2>What our client say.</h2>
+          <p class="ise-new-ser-testi-description">ISpectra Technologies, trusted by businesses throughout the world, provides creative, secure, and high-performance solutions that have a measurable impact.</p>
+          <div class="ise-new-ser-testi-rating"><span class="ise-new-ser-testi-rating-number">4.5</span> ★★★★★</div>
+          <div class="ise-new-ser-testi-reviews"><a href="#">60 Reviews</a></div>
+
+
+          </div>
+         
+        </div>
+        <!-- Right Dual Swiper Carousel -->
+        <div class="col-md-7">
+          <div class="testi-is-main">
+            <img class="testi-is-main-shadow" src="images/sd100.png" alt="">
+            <div class="row">
+            <!-- Left Slider -->
+            <div class="col-md-6">
+              <div class="ise-new-ser-testi-dual-container">
+                <div class="swiper mySwiper1">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"ISpectra helped us scale quickly with secure, future-ready solutions. Their team showed outstanding technical expertise, clear communication, and continuous support."</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=11" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">Sarah K.</h4>
+                            <span class="ise-new-ser-testi-author-position">CTO, FinTech Solutions</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"Partnering with ISpectra transformed our business operations. Their deep understanding, proactive approach, and scalable solutions exceeded expectations. The team's dedication and innovative mindset truly make them stand out."</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=12" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">Michael R.</h4>
+                            <span class="ise-new-ser-testi-author-position">CEO, RetailPro</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"ISpectra's experts built a seamless, high-performing platform customized to our needs. Transparent process, excellent support, and timely delivery."</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=13" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">Ananya P.</h4>
+                            <span class="ise-new-ser-testi-author-position">Product Head, HealthSync</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"ISpectra's experts built a seamless, high-performing platform customized to our needs. Their transparent process, excellent support, and timely delivery made collaboration smooth and results highly successful."</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=14" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">Lily Grace M.</h4>
+                            <span class="ise-new-ser-testi-author-position">CEO, Infoftech</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Slider -->
+            <div class="col-md-6">
+              <div class="ise-new-ser-testi-dual-container">
+                <div class="swiper mySwiper2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"The security solutions provided by ISpectra are top-notch. They helped us protect our critical data while maintaining system performance."</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=15" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">James W.</h4>
+                            <span class="ise-new-ser-testi-author-position">CISO, SecureBank</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"ISpectra's cloud migration services were seamless. They minimized downtime and ensured our transition was smooth and efficient."</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=16" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">Robert T.</h4>
+                            <span class="ise-new-ser-testi-author-position">IT Director, CloudNet</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"ISpectra helped us scale quickly with secure, future-ready solutions. Their team showed outstanding technical expertise, clear communication, and continuous support. Their reliability and commitment make them a valued long-term partner."</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=17" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">Emma L.</h4>
+                            <span class="ise-new-ser-testi-author-position">Operations Manager, LogiFlow</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="ise-new-ser-testi-card">
+                        <p class="ise-new-ser-testi-card-text">"The custom software developed by ISpectra has revolutionized how we interact with our customers. Highly recommend their services!"</p>
+                        <div class="ise-new-ser-testi-author">
+                          <img src="https://i.pravatar.cc/100?img=18" alt="Author" class="ise-new-ser-testi-author-img">
+                          <div>
+                            <h4 class="ise-new-ser-testi-author-name">Daniel K.</h4>
+                            <span class="ise-new-ser-testi-author-position">Product Manager, ConnectPro</span>
+                            <div class="ise-new-ser-testi-stars">★★★★★</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- row end -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // First swiper (scroll up)
+    var swiper1 = new Swiper(".mySwiper1", {
+      direction: "vertical",
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 1200,
+      slidesPerView: 2,
+      spaceBetween: 20,
+    });
+    // Second swiper (scroll down)
+    var swiper2 = new Swiper(".mySwiper2", {
+      direction: "vertical",
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        reverseDirection: true,
+        disableOnInteraction: false,
+      },
+      speed: 1200,
+      slidesPerView: 2,
+      spaceBetween: 20,
+    });
+  </script>
+
+
+<!-- blog section-->
+
+<section class="ispe-blog-newsection">
+    <div class="container">
+      <h3 class="ispe-blog-newsection-h3">Explore Resources That Drive Digital Excellence</h3>
+      <p class="ispe-blog-newsection-p">Discover the insights, tactics, and thought leadership that will shape the
+        future of technology and business transformation.</p>
+
+      <div class="row">
+        <!-- Left Large Card -->
+        <div class="col-md-6">
+          <div class="ispe-about-card">
+            <img src="images/icepe.png" alt="About Us" class="ispe-about-img-aa">
+            <div class="ispe-about-overlay"></div>
+            <div class="ispe-about-content">
+              <h6>About Us</h6>
+              <p>Providing scalable, secure, and future-proof digital solutions that power growth and innovation.</p>
+               <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Cards -->
+        <div class="col-md-3">
+          <div class="ispe-about-card-a2-id">
+<h5>Our Blog</h5>
+         <div class="ispe-about-cardiimgdiv" > <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+
+        <div class="col-md-3" >
+          <div class="ispe-about-card-a2-purple-id">
+<h5>Our Blog</h5>
+         <div class="ispe-about-cardiimgdiv"> <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag-2">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Second Row -->
+     <div class="second-new-ispec-blog">
+       <div class="row">
+        <div class="col-md-3" >
+          <div class="ispe-about-card-a2-id">
+<h5>Our Blog</h5>
+        <div class="ispe-about-cardiimgdiv">  <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+
+        <div class="col-md-3" >
+          <div class="ispe-about-card-blue-id">
+            <h5>Our Blog</h5>
+        <div class="ispe-about-cardiimgdiv">  <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag-2">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+
+        <!-- White Paper Card 1 -->
+        <div class="col-md-3">
+          <div class="isb-clip-diff-div">
+            <div class="isb-clip-diff-imgdiv">
+              <img class="isb-clip-diff-img" src="images/kp6.png" alt="">
+              <h5 class="isb-clip-diff-h5ab">White Paper</h5>
+            </div>
+            <div class="clip-colou-divv green">
+              <p class="ispe-about-cardi-ptag-2">Top Software Development Trends Shaping the Future</p>
+              <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- White Paper Card 2 -->
+        <div class="col-md-3">
+          <div class="isb-clip-diff-div">
+            <div class="isb-clip-diff-imgdiv">
+              <img class="isb-clip-diff-img" src="images/kp7.png" alt="">
+              <h5 class="isb-clip-diff-h5ab">White Paper</h5>
+            </div>
+            <div class="clip-colou-divv orange">
+              <p class="ispe-about-cardi-ptag-2">Top Software Development Trends Shaping the Future</p>
+              <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     </div>
+    </div>
+  </section>
+
+</body>
+</html>

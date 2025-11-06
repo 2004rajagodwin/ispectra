@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Development Process</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+     
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+    
+      color: #333;
+      line-height: 1.6;
+    }
+
+   
+
+    @media (max-width: 768px) {
+     .isp-soft-deb-process-section .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
+    .isp-soft-deb-process-section {
+       background-color: #f8f9fa;
+      border-radius: 12px;
+     
+      
+    }
+
+    .isp-soft-deb-left-section {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+     
+    }
+
+    .isp-soft-deb-left-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .isp-soft-deb-left-section-h3 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #313131;
+    }
+
+    .isp-soft-deb-right-section {
+      padding: 10px;
+      position: relative;
+    }
+
+    .isp-soft-deb-center-border {
+      position: absolute;
+      left: 50%;
+      top: 40px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #4a6cf7, #8e44ad, #87CEEB, #e74c3c, #27ae60, #ff9f43, #4a6cf7);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .isp-soft-deb-steps-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Step Wrapper */
+    .isp-soft-deb-step-wrapper {
+      position: relative;
+    }
+
+    /* Step Card (Base Style) */
+    .isp-soft-deb-step {
+      display: flex;
+      position: relative;
+      padding: 20px 30px ;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+      border: 1px solid #e0e0e0; /* Default border */
+    }
+
+    /* Blue Step Border */
+    .isp-soft-deb-step-wrapper-blue .isp-soft-deb-step {
+      border: 1px solid #2c4be0;
+    }
+
+    /* Red Step Border */
+    .isp-soft-deb-step-wrapper-red .isp-soft-deb-step {
+      border: 1px solid #e74c3c;
+    }
+
+    /* Sky Blue Step Border */
+    .isp-soft-deb-step-wrapper-skyblue .isp-soft-deb-step {
+      border: 1px solid #87CEEB;
+    }
+
+    /* Purple Step Border */
+    .isp-soft-deb-step-wrapper-purple .isp-soft-deb-step {
+      border: 1px solid #8e44ad;
+    }
+
+    /* Green Step Border */
+    .isp-soft-deb-step-wrapper-green .isp-soft-deb-step {
+      border: 1px solid #27ae60;
+    }
+
+    /* Orange Step Border */
+    .isp-soft-deb-step-wrapper-orange .isp-soft-deb-step {
+      border: 1px solid #ff9f43;
+    }
+
+    .isp-soft-deb-step-left {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .isp-soft-deb-step-right {
+      flex: 1;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    /* Duration Badge Base Style */
+    .isp-soft-deb-step-duration {
+      padding: 8px 24px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+      min-width: 150px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .isp-soft-deb-step-duration i {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    /* Blue Duration Badge (1-30 days) */
+    .isp-soft-deb-step-duration-blue {
+     background-color: #f8f9fa;
+      border: 1px solid #2c4be0;
+      color: #2c4be0;
+      box-shadow: 0 4px 8px rgba(74, 108, 247, 0.15);
+    }
+
+    /* Red Duration Badge (30-60 days) */
+    .isp-soft-deb-step-duration-red {
+       background-color: #f8f9fa;
+      border: 1px solid #e74c3c;
+      color: #e74c3c;
+      box-shadow: 0 4px 8px rgba(231, 76, 60, 0.15);
+    }
+
+    /* Sky Blue Duration Badge (60-90 days) */
+    .isp-soft-deb-step-duration-skyblue {
+      background-color: #f8f9fa;
+      border: 1px solid #87CEEB;
+      color: #87CEEB;
+      box-shadow: 0 4px 8px rgba(135, 206, 235, 0.15);
+    }
+
+    /* Purple Duration Badge (90-120 days) */
+    .isp-soft-deb-step-duration-purple {
+      background-color: #f8f9fa;
+      border: 1px solid #8e44ad;
+      color: #8e44ad;
+      box-shadow: 0 4px 8px rgba(142, 68, 173, 0.15);
+    }
+
+    /* Green Duration Badge (120-150 days) */
+    .isp-soft-deb-step-duration-green {
+      background-color: #f8f9fa;
+      border: 1px solid #27ae60;
+      color: #27ae60;
+      box-shadow: 0 4px 8px rgba(39, 174, 96, 0.15);
+    }
+
+    /* Orange Duration Badge (150-180 days) */
+    .isp-soft-deb-step-duration-orange {
+      background-color: #f8f9fa;
+      border: 1px solid #ff9f43;
+      color: #ff9f43;
+      box-shadow: 0 4px 8px rgba(255, 159, 67, 0.15);
+    }
+
+    .isp-soft-deb-step-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    /* Step title colors */
+    .isp-soft-deb-step-title-blue {
+      color: #313131;
+    }
+
+    .isp-soft-deb-step-title-red {
+      color: #313131;
+    }
+
+    .isp-soft-deb-step-title-skyblue {
+      color: #313131;
+    }
+
+    .isp-soft-deb-step-title-purple {
+      color: #313131;
+    }
+
+    .isp-soft-deb-step-title-green {
+      color: #313131;
+    }
+
+    .isp-soft-deb-step-title-orange {
+      color: #313131;
+    }
+
+    .isp-soft-deb-step-description {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .isp-soft-deb-left-section,
+      .isp-soft-deb-right-section {
+        padding: 30px;
+      }
+
+      .isp-soft-deb-step {
+        flex-direction: column;
+      }
+
+      .isp-soft-deb-step-left,
+      .isp-soft-deb-step-right {
+        padding: 0;
+      }
+
+      .isp-soft-deb-step-right {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .isp-soft-deb-center-border {
+        display: none;
+      }
+    }
+
+    .isp-soft-deb-flex .row {
+      display: flex;
+      gap: 20px;
+    }
+
+    /* ================== HOVER EFFECTS ================== */
+
+    /* Default Step (Blue) */
+    .isp-soft-deb-step-wrapper:hover .isp-soft-deb-step {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #2c4be0;
+      background-color: #fff;
+    }
+
+    .isp-soft-deb-step-wrapper:hover .isp-soft-deb-step-duration-blue {
+      background-color: #2c4be0;
+      color: #fff;
+    }
+
+    /* 🔴 Red Step Variant */
+    .isp-soft-deb-step-wrapper-red:hover .isp-soft-deb-step {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #e74c3c;
+      background-color: #fff;
+    }
+
+    .isp-soft-deb-step-wrapper-red:hover .isp-soft-deb-step-duration-red {
+      background-color: #e74c3c;
+      color: #fff;
+    }
+
+    /* 🔵 Sky Blue Step Variant */
+    .isp-soft-deb-step-wrapper-skyblue:hover .isp-soft-deb-step {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #87CEEB;
+      background-color: #fff;
+    }
+
+    .isp-soft-deb-step-wrapper-skyblue:hover .isp-soft-deb-step-duration-skyblue {
+      background-color: #87CEEB;
+      color: #fff;
+    }
+
+    /* 💜 Purple Step Variant */
+    .isp-soft-deb-step-wrapper-purple:hover .isp-soft-deb-step {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #8e44ad;
+      background-color: #fff;
+    }
+
+    .isp-soft-deb-step-wrapper-purple:hover .isp-soft-deb-step-duration-purple {
+      background-color: #8e44ad;
+      color: #fff;
+    }
+
+    /* 🟢 Green Step Variant */
+    .isp-soft-deb-step-wrapper-green:hover .isp-soft-deb-step {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #27ae60;
+      background-color: #fff;
+    }
+
+    .isp-soft-deb-step-wrapper-green:hover .isp-soft-deb-step-duration-green {
+      background-color: #27ae60;
+      color: #fff;
+    }
+
+    /* 🟠 Orange Step Variant */
+    .isp-soft-deb-step-wrapper-orange:hover .isp-soft-deb-step {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #ff9f43;
+      background-color: #fff;
+    }
+
+    .isp-soft-deb-step-wrapper-orange:hover .isp-soft-deb-step-duration-orange {
+      background-color: #ff9f43;
+      color: #fff;
+    }
+
+    /* new own code */
+    .isp-nde-des-img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .ispec-subb-gra-tag-3 {
+      width: max-content;
+      background: linear-gradient(270deg, #FCFCFC 0%, #FFF1FF 100%);
+      color: #F45A4E;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 6px 15px;
+      margin-bottom: 30px;
+    }
+    
+    .step-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+    }
+    
+    /* Icon background colors */
+    .step-icon-blue {
+      background: #e9f0ff;
+    }
+    
+    .step-icon-red {
+      background: #ffeaea;
+    }
+    
+    .step-icon-skyblue {
+      background: #e6f7ff;
+    }
+    
+    .step-icon-purple {
+      background: #f4e6ff;
+    }
+    
+    .step-icon-green {
+      background: #eafaf1;
+    }
+    
+    .step-icon-orange {
+      background: #fff0e1;
+    }
+    
+    .step-icon img {
+      max-width: 80%;
+    }
+    
+    .step-content {
+      flex: 1;
+    }
+
+    .pp-ivce-right{
+      color: #3C3C3C;
+      margin-bottom: 0px;
+    }
+    
+    /* Step Number Styles */
+    .step-number {
+      background-color: transparent;
+      color: #989898;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    .step-title-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .step-title-container .isp-soft-deb-step-title {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="isp-soft-deb-process-section">
+<div class="container">
+   
+      <div class="row">
+        <!-- Left Section - col-md-6 -->
+        <div class="col-md-6">
+          <div class="isp-soft-deb-left-section">
+            <p class="ispec-subb-gra-tag-3">How We Work</p>
+            <h3 class="isp-soft-deb-left-section-h3">Our Comprehensive Software Development Process</h3>
+            <p class="isp-soft-deb-left-section-p">We follow a structured approach to ensure your project is delivered on time, within budget, and meets all your requirements.</p>
+            <div class="isp-nde-des-igdiv">
+              <img class="isp-nde-des-img" src="images/Rectangle 736.png" alt="Software Development Process">
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section - col-md-6 -->
+        <div class="col-md-6">
+          <div class="isp-soft-deb-right-section">
+            <div class="isp-soft-deb-center-border"></div>
+
+            <div class="isp-soft-deb-steps-container">
+              <!-- Step 1 (Blue) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-blue">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-blue">
+                    <i class="fas fa-calendar-alt"></i> 1 - 30 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-blue">
+                          <img src="images/kj1.png" alt="Discovery Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-blue">Strategic Discovery</h5>
+                            <span class="step-number">Step 01</span>
+                          </div>
+                          <p class="pp-ivce-right">Understand goals, users, and company obstacles with collaborative workshops and in-depth research to gain practical insights.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 2 (Purple) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-purple">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-purple">
+                    <i class="fas fa-calendar-alt"></i> 90 - 120 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-purple">
+                          <img src="images/kj111.png" alt="Testing Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-purple">Automated Testing & QA</h5>
+                            <span class="step-number">Step 02</span>
+                          </div>
+                          <p class="pp-ivce-right">Implement comprehensive testing strategies including unit tests, integration tests, and end-to-end testing to ensure software quality and reliability.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Step 3 (Sky Blue) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-skyblue">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-skyblue">
+                    <i class="fas fa-calendar-alt"></i> 60 - 90 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-skyblue">
+                          <img src="images/kj2.png" alt="Development Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-skyblue">Web Development</h5>
+                            <span class="step-number">Step 03</span>
+                          </div>
+                          <p class="pp-ivce-right">Build robust, scalable web applications using modern technologies and best practices to ensure high performance and security.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 4 (Red) -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-red">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-red">
+                    <i class="fas fa-calendar-alt"></i> 30 - 60 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-red">
+                          <img src="images/kj3.png" alt="Design Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-red">UX-Driven Design</h5>
+                            <span class="step-number">Step 04</span>
+                          </div>
+                          <p class="pp-ivce-right">Create intuitive, user-friendly interfaces that improve experiences through research, usability testing, and design innovation.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Step 5 (Green) - CI/CD & DevOps Delivery -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-green">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-green">
+                    <i class="fas fa-calendar-alt"></i> 120 - 150 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-green">
+                          <img src="images/kj4.png" alt="DevOps Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-green">CI/CD & DevOps Delivery</h5>
+                            <span class="step-number">Step 05</span>
+                          </div>
+                          <p class="pp-ivce-right">Implement continuous integration and continuous deployment pipelines with DevOps practices to ensure reliable and efficient software delivery.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Step 6 (Orange) - Post-Launch Optimization -->
+              <div class="isp-soft-deb-step-wrapper isp-soft-deb-step-wrapper-orange">
+                <div class="isp-soft-deb-step-right">
+                  <h4 class="isp-soft-deb-step-duration isp-soft-deb-step-duration-orange">
+                    <i class="fas fa-calendar-alt"></i> 150 - 180 days
+                  </h4>
+                </div>
+
+                <div class="isp-soft-deb-step">
+                  <div class="isp-soft-deb-step-left">
+                    <div class="isp-soft-deb-flex">
+                      <div class="row">
+                        <div class="step-icon step-icon-orange">
+                          <img src="images/kj5.png" alt="Optimization Icon">
+                        </div>
+                        <div class="step-content">
+                          <div class="step-title-container">
+                            <h5 class="isp-soft-deb-step-title isp-soft-deb-step-title-orange">Post-Launch Optimization</h5>
+                            <span class="step-number">Step 06</span>
+                          </div>
+                          <p class="pp-ivce-right">Continuously monitor, analyze, and optimize the application post-launch to improve performance, user experience, and business outcomes.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- steps container -->
+          </div>
+        </div>
+      </div>
+    
+  </div>
+  </section>
+  
+</body>
+</html>

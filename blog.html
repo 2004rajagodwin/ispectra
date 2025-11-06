@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <title>Document</title>
+  <style>
+    .ispe-blog-newsection {
+      margin-top: 60px;
+    }
+
+    .ispe-about-card-atag {
+      color: #313131;
+      text-decoration: none;
+      font-weight: 550;
+      margin-bottom: 30px;
+    }
+
+    .ispe-about-card-atag-2 {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 550;
+    }
+
+    /* About Us Card */
+    .ispe-about-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .ispe-about-img-aa {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Overlay */
+    .ispe-about-overlay {
+      position: absolute;
+      inset: 0;
+     
+      transition: background 0.3s ease;
+    }
+
+    .ispe-about-card .ispe-about-overlay {
+     background: rgba(0, 0, 0, 0.5); /* medium */
+    }
+
+    /* Content */
+    .ispe-about-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 25px 30px;
+      color: #fff;
+      z-index: 2;
+    }
+
+    .ispe-about-content h6 {
+      font-weight: 550;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .ispe-about-content p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    
+      font-weight: 550;
+    }
+
+    .ispe-about-cardi-ptag {
+      color: #403D3D;
+      font-weight: 550;
+      margin-top: 20px;
+    }
+
+    .ispe-about-cardi-ptag-2 {
+      color: #fff;
+      font-weight: 550;
+      margin-top: 20px;
+    }
+
+    .ispe-about-card-a2-id {
+      background-color: #F3F3F3;
+      padding: 20px;
+    }
+
+    .ispe-about-card-a2-purple-id {
+      background-color: #8E2D8D;
+      padding: 20px;
+      color: #fff;
+      border-top-right-radius: 20px;
+
+    }
+
+    .ispe-about-card-blue-id {
+      background-color: #6048FA;
+      padding: 20px;
+      color: #fff;
+    }
+
+    .isb-clip-diff-img {
+      width: 100%;
+    }
+
+    .ispe-about-cardiimg {
+      width: 100%;
+    }
+
+    .isb-clip-diff-imgdiv {
+      position: relative;
+    }
+
+    .isb-clip-diff-h5ab {
+      position: absolute;
+      top: 0;
+      padding: 18px;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .clip-colou-divv {
+      position: relative;
+      top: -94px; /* moves div up */
+      background-color: #00866A;
+      color: #fff;
+      padding: 35px 20px;
+     clip-path: polygon(0 0, 100% 28%, 100% 100%, 0% 100%);
+      border-top-left-radius: 20px;
+
+    }
+
+    .clip-colou-divv.orange {
+      background-color: #D94F2A;
+        border-bottom-right-radius: 20px;
+    }
+
+    .clip-colou-divv.purple {
+      background-color: #8E2D8D;
+      
+
+    }
+
+    .clip-colou-divv.blue {
+      background-color: #6048FA;
+    }
+
+    .second-new-ispec-blog .col-md-3{
+      padding: 0px;
+    
+    }
+
+    .ispe-blog-newsection .col-md-6{
+      padding: 0px;
+    }
+    .ispe-blog-newsection .col-md-3{
+      padding: 0px;
+   
+    }
+
+    .second-new-ispec-blog  .ispe-about-card-a2-id{
+border-bottom-left-radius: 20px;
+
+    }
+
+
+    /* div hover animation img */
+
+    .isb-clip-diff-div {
+  overflow: hidden;
+  position: relative;
+}
+
+.isb-clip-diff-img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+  width: 100%;
+  display: block;
+}
+
+.isb-clip-diff-div:hover .isb-clip-diff-img {
+  transform: scale(1.1);
+  filter: brightness(1.2) contrast(1.1); /* Zoom + filter */
+}
+  
+
+/* 2nd div */
+
+/* 3rd image  div */
+
+.ispe-about-card-a2-id {
+  position: relative;
+  min-height: 343px;
+ 
+  transition: box-shadow 0.4s ease; /* shadow only */
+}
+
+/* image wrapper */
+.ispe-about-cardiimgdiv {
+  overflow: hidden;
+ 
+}
+
+/* image styling */
+.ispe-about-cardiimgdiv img.ispe-about-cardiimg {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  
+}
+
+/* only the image zooms on hover */
+.ispe-about-card-a2-id:hover .ispe-about-cardiimgdiv img.ispe-about-cardiimg {
+  transform: scale(1.1);
+  filter: brightness(1.15) contrast(1.1);
+}
+
+/* optional: card shadow (but no zoom/lift) */
+.ispe-about-card-a2-id:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 3rd */
+.ispe-about-card-a2-purple-id {
+  position: relative;
+ 
+  min-height: 343px;
+
+  transition: box-shadow 0.4s ease;
+}
+
+/* image wrapper */
+.ispe-about-cardiimgdiv {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* image styling */
+.ispe-about-cardiimgdiv img.ispe-about-cardiimg {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+ 
+}
+
+/* only the image zooms on hover */
+.ispe-about-card-a2-purple-id:hover .ispe-about-cardiimgdiv img.ispe-about-cardiimg {
+  transform: scale(1.1);
+  filter: brightness(1.15) contrast(1.1);
+}
+
+/* optional: card hover shadow */
+.ispe-about-card-a2-purple-id:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 4th div */
+.ispe-about-card-blue-id {
+  position: relative;
+  min-height: 343px;
+ 
+  
+  transition: box-shadow 0.4s ease;
+}
+
+/* image wrapper */
+.ispe-about-cardiimgdiv {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* image styling */
+.ispe-about-cardiimgdiv img.ispe-about-cardiimg {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  border-radius: 10px;
+}
+
+/* only the image zooms on hover */
+.ispe-about-card-blue-id:hover .ispe-about-cardiimgdiv img.ispe-about-cardiimg {
+  transform: scale(1.1);
+  filter: brightness(1.15) contrast(1.1);
+}
+
+ .second-new-ispec-blog{
+      margin-top: -4px;
+    }
+
+/* col-6 hover ani */
+
+/* Card wrapper */
+.ispe-about-card {
+  position: relative;
+  min-height: 343px;
+  transition: box-shadow 0.4s ease;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Image styling */
+.ispe-about-card img.ispe-about-img-aa {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Zoom and brightness effect on hover */
+.ispe-about-card:hover img.ispe-about-img-aa {
+  transform: scale(1.1);
+  filter: brightness(1.15) contrast(1.1);
+}
+
+/* Optional: card shadow on hover */
+.ispe-about-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Overlay (optional: slightly darkens image) */
+.ispe-about-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); /* adjust transparency */
+  transition: background 0.4s ease;
+}
+
+.ispe-about-card:hover .ispe-about-overlay {
+  background: rgba(0,0,0,0.15); /* lighten on hover */
+}
+
+/* Icon slide on hover */
+.ispe-about-card-atag-2 i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.ispe-about-card-atag-2:hover i {
+  transform: translateX(6px);
+}
+
+/* Bold text */
+.ispe-about-card-atag-2 {
+  font-weight: 600;
+}
+
+
+    /* button hover animation */
+    .ispe-about-card-atag {
+  font-weight: 600; /* make text bolder, 500-700 adjustable */
+}
+
+.ispe-about-card-atag i {
+  display: inline-block;   
+  transition: transform 0.3s ease;
+}
+
+.ispe-about-card-atag:hover i {
+  transform: translateX(6px);
+}
+
+/* 2nd a tag */
+.ispe-about-card-atag-2 {
+  font-weight: 600; /* make text bolder */
+}
+
+.ispe-about-card-atag-2 i {
+  display: inline-block;   
+  transition: transform 0.3s ease;
+}
+
+.ispe-about-card-atag-2:hover i {
+  transform: translateX(6px); /* moves icon right on hover */
+}
+.ispe-blog-newsection-h3{
+  text-align: center;
+}
+
+.ispe-blog-newsection-p{
+text-align: center;
+width: 50%;
+margin: 0 auto;
+margin-bottom: 40px;
+}
+  </style>
+</head>
+
+<body>
+  <section class="ispe-blog-newsection">
+    <div class="container">
+      <h3 class="ispe-blog-newsection-h3">Explore Resources That Drive Digital Excellence</h3>
+      <p class="ispe-blog-newsection-p">Discover the insights, tactics, and thought leadership that will shape the
+        future of technology and business transformation.</p>
+
+      <div class="row">
+        <!-- Left Large Card -->
+        <div class="col-md-6">
+          <div class="ispe-about-card">
+            <img src="images/icepe.png" alt="About Us" class="ispe-about-img-aa">
+            <div class="ispe-about-overlay"></div>
+            <div class="ispe-about-content">
+              <h6>About Us</h6>
+              <p>Providing scalable, secure, and future-proof digital solutions that power growth and innovation.</p>
+               <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Cards -->
+        <div class="col-md-3">
+          <div class="ispe-about-card-a2-id">
+<h5>Our Blog</h5>
+         <div class="ispe-about-cardiimgdiv" > <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+
+        <div class="col-md-3" >
+          <div class="ispe-about-card-a2-purple-id">
+<h5>Our Blog</h5>
+         <div class="ispe-about-cardiimgdiv"> <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag-2">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Second Row -->
+     <div class="second-new-ispec-blog">
+       <div class="row">
+        <div class="col-md-3" >
+          <div class="ispe-about-card-a2-id">
+<h5>Our Blog</h5>
+        <div class="ispe-about-cardiimgdiv">  <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+
+        <div class="col-md-3" >
+          <div class="ispe-about-card-blue-id">
+            <h5>Our Blog</h5>
+        <div class="ispe-about-cardiimgdiv">  <img class="ispe-about-cardiimg" src="images/kp2.png" alt=""></div>
+          <p class="ispe-about-cardi-ptag-2">Keep up with industry trends, expert advice, and practical ideas.</p>
+          <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+          </div>
+          
+        </div>
+
+        <!-- White Paper Card 1 -->
+        <div class="col-md-3">
+          <div class="isb-clip-diff-div">
+            <div class="isb-clip-diff-imgdiv">
+              <img class="isb-clip-diff-img" src="images/kp6.png" alt="">
+              <h5 class="isb-clip-diff-h5ab">White Paper</h5>
+            </div>
+            <div class="clip-colou-divv green">
+              <p class="ispe-about-cardi-ptag-2">Top Software Development Trends Shaping the Future</p>
+              <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- White Paper Card 2 -->
+        <div class="col-md-3">
+          <div class="isb-clip-diff-div">
+            <div class="isb-clip-diff-imgdiv">
+              <img class="isb-clip-diff-img" src="images/kp7.png" alt="">
+              <h5 class="isb-clip-diff-h5ab">White Paper</h5>
+            </div>
+            <div class="clip-colou-divv orange">
+              <p class="ispe-about-cardi-ptag-2">Top Software Development Trends Shaping the Future</p>
+              <a class="ispe-about-card-atag-2" href="">Read More <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     </div>
+    </div>
+  </section>
+</body>
+
+</html>

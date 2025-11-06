@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Team Members</title>
+    <style>
+        /* Team Slider Section */
+        .ispectra-team-slider-section {
+            background-image: url(../ispectra-sub/images/ab-bannwe.png);
+            color: #fff;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-top: 130px;
+        }
+
+        .ispectra-team-slider-section .ispectra-team-slider-title {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .ispectra-team-slider-section .ispectra-team-slider-subtitle {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #b3b3ff;
+        }
+
+        .ispectra-team-slider-section .ispectra-team-slider-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .ispectra-team-slider-section .ispectra-team-slider-image-wrapper {
+            border-radius: 12px;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ispectra-team-slider-section .ispectra-team-slider-image {
+            width: 85%;
+            margin: 0 auto;
+            border-radius: 12px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .ispectra-team-slider-section .ispectra-team-slider-image:hover {
+            transform: scale(1.03);
+        }
+
+        /* Custom carousel controls */
+        .ispectra-team-slider-section .ispectra-carousel-control-prev,
+        .ispectra-team-slider-section .ispectra-carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .ispectra-team-slider-section:hover .ispectra-carousel-control-prev,
+        .ispectra-team-slider-section:hover .ispectra-carousel-control-next {
+            opacity: 1;
+        }
+
+        .ispectra-team-slider-section .ispectra-carousel-control-prev {
+            left: 20px;
+        }
+
+        .ispectra-team-slider-section .ispectra-carousel-control-next {
+            right: 20px;
+        }
+
+        .ispectra-team-slider-section .ispectra-carousel-control-prev-icon,
+        .ispectra-team-slider-section .ispectra-carousel-control-next-icon {
+            background-size: 20px 20px;
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Custom swipe indicators */
+        .ispectra-team-slider-section .ispectra-swipe-indicator {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .ispectra-team-slider-section .ispectra-swipe-indicator i {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 24px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.5; }
+            50% { opacity: 1; }
+            100% { opacity: 0.5; }
+        }
+
+        @media (min-width: 768px) {
+            .ispectra-team-slider-section .ispectra-swipe-indicator {
+                display: none;
+            }
+        }
+
+        /* Custom indicators */
+        .ispectra-team-slider-section .ispectra-carousel-indicators {
+            bottom: -50px;
+        }
+
+        .ispectra-team-slider-section .ispectra-carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(179, 179, 255, 0.5);
+            margin: 0 5px;
+            border: none;
+        }
+
+        .ispectra-team-slider-section .ispectra-carousel-indicators button.active {
+            background-color: #b3b3ff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .ispectra-team-slider-section {
+                margin-top: 100px;
+                padding: 30px 0;
+            }
+            
+            .ispectra-team-slider-section .ispectra-team-slider-title {
+                font-size: 28px;
+            }
+            
+            .ispectra-team-slider-section .ispectra-team-slider-subtitle {
+                font-size: 18px;
+            }
+            
+            .ispectra-team-slider-section .ispectra-team-slider-text {
+                font-size: 14px;
+            }
+            
+            .ispectra-team-slider-section .ispectra-team-slider-image {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Team Slider Section -->
+    <section class="ispectra-team-slider-section">
+        <div class="container">
+            <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Indicators
+                <div class="carousel-indicators ispectra-carousel-indicators">
+                    <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>  -->
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="row align-items-center">
+                            <!-- Left Content -->
+                            <div class="col-md-6">
+                                <div class="ispectra-team-slider-content">
+                                    <h2 class="ispectra-team-slider-title">Manojkumar Kamatchi</h2>
+                                    <h4 class="ispectra-team-slider-subtitle">Co-Founder & CEO</h4>
+                                    <p class="ispectra-team-slider-text">
+                                        Manojkumar Kamatchi brings over 18 years of international experience in cybersecurity to
+                                        ISpectra Technologies, leading the company with insight and purpose. He is Co-Founder
+                                        and CEO of ISpectra, where he blends subject matter expertise and technical talent with
+                                        high-level leadership to deliver effective security solutions. Under his leadership, ISpectra
+                                        provides organizations with the tools and knowledge to enhance resilience in a digital first
+                                        world by achieving compliance and scaling with confidence. Manojkumar prides himself on
+                                        building a culture of innovation and trust so that clients receive not only the best in terms of
+                                        service, but also sustainable value. Manojkumar's leadership has established ISpectra's
+                                        reputation as a trusted name in the industry.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Right Image -->
+                            <div class="col-md-6">
+                                <div class="ispectra-team-slider-image-wrapper text-center">
+                                    <img src="images/ab-111.png" alt="Manojkumar Kamatchi - Co-Founder & CEO" class="ispectra-team-slider-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <!-- Left Content -->
+                            <div class="col-md-6">
+                                <div class="ispectra-team-slider-content">
+                                    <h2 class="ispectra-team-slider-title">Balakumar Ramalingam</h2>
+                                    <h4 class="ispectra-team-slider-subtitle">Co-Founder & CTO</h4>
+                                    <p class="ispectra-team-slider-text">
+                                        As Co-Founder and CTO, Balakumar Ramalingam leads the design, implementation, and
+                                        continuous improvement of ISpectra's software practices. With over 20 years of
+                                        Experience, he is the brainchild behind our engineering principles, continuously pushing
+                                        the bar for code quality, reliability & scalability. He uses his strong technical background
+                                        and experience with process optimization to ensure the workflow of development,
+                                        deployment, and maintenance is efficient. Balakumar leads the teams through best
+                                        practices in version control, continuous integration, proper testing, and agile processes.
+                                        Under Balakumar's steer, ISpectra constantly produces quality, and future-compatible
+                                        software results while fulfilling our clients' needs. He is deeply passionate about building a
+                                        culture of learning, innovation, and technical excellence across the company.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Right Image -->
+                            <div class="col-md-6">
+                                <div class="ispectra-team-slider-image-wrapper text-center">
+                                    <img src="images/abbo-b.png" alt="Balakumar Ramalingam - Co-Founder & CTO" class="ispectra-team-slider-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center">
+                            <!-- Left Content -->
+                            <div class="col-md-6">
+                                <div class="ispectra-team-slider-content">
+                                    <h2 class="ispectra-team-slider-title">Hariharasudan Neelarathinam</h2>
+                                    <h4 class="ispectra-team-slider-subtitle">Co-Founder & CSO</h4>
+                                    <p class="ispectra-team-slider-text">
+                                        Hariharasudan Neelarathinam offers extensive operational, client services, and business
+                                        strategy experience to oversee ISpectra's strategic vision and growth. His background of
+                                        over 20 years, leading healthcare services and managing large-scale transitions, has
+                                        positioned him well to align technology, process, and market goals in support of
+                                        sustainable business value. As CSO, he facilitates discussions to develop frameworks that
+                                        enable ISpectra's reach, partnerships & positioning in rapidly evolving environments.
+                                        Hariharasudan is focused on creating a culture of strategic rigor and long-term thinking in
+                                        all decisions to provide value and resilience in volatile and unpredictable business
+                                        environments. With this strategic leadership, ISpectra is positioned to provide ongoing
+                                        value and advancement to clients and stakeholders.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Right Image -->
+                            <div class="col-md-6">
+                                <div class="ispectra-team-slider-image-wrapper text-center">
+                                    <img src="images/abbo-b.png" alt="Hariharasudan Neelarathinam - Co-Founder & CSO" class="ispectra-team-slider-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev ispectra-carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                   
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next ispectra-carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                  
+                    <span class="visually-hidden">Next</span>
+                </button>
+                
+                <!-- Swipe Indicator (visible only on mobile) -->
+                <div class="ispectra-swipe-indicator">
+                    <i class="bi bi-arrow-left-circle"></i>
+                    <i class="bi bi-arrow-right-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Carousel Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('teamCarousel');
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            // Function to handle swipe detection
+            function handleSwipe() {
+                if (touchEndX < touchStartX - 50) {
+                    // Swipe left - go to next slide
+                    const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                    carouselInstance.next();
+                }
+                
+                if (touchEndX > touchStartX + 50) {
+                    // Swipe right - go to previous slide
+                    const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                    carouselInstance.prev();
+                }
+            }
+            
+            // Add touch event listeners
+            carousel.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            // Optional: Add mouse drag support for desktop
+            let mouseDown = false;
+            let startX = 0;
+            
+            carousel.addEventListener('mousedown', e => {
+                mouseDown = true;
+                startX = e.pageX;
+                carousel.style.cursor = 'grabbing';
+            });
+            
+            carousel.addEventListener('mouseleave', () => {
+                mouseDown = false;
+                carousel.style.cursor = 'grab';
+            });
+            
+            carousel.addEventListener('mouseup', e => {
+                if (!mouseDown) return;
+                mouseDown = false;
+                carousel.style.cursor = 'grab';
+                
+                const endX = e.pageX;
+                const diff = startX - endX;
+                
+                if (diff > 50) {
+                    // Dragged left - go to next slide
+                    const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                    carouselInstance.next();
+                } else if (diff < -50) {
+                    // Dragged right - go to previous slide
+                    const carouselInstance = bootstrap.Carousel.getInstance(carousel);
+                    carouselInstance.prev();
+                }
+            });
+            
+            // Set initial cursor style
+            carousel.style.cursor = 'grab';
+            
+            // Auto-advance carousel every 8 seconds
+            const carouselInstance = new bootstrap.Carousel(carousel, {
+                interval: 8000,
+                wrap: true
+            });
+        });
+    </script>
+</body>
+</html>

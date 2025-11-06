@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Class Slider Layout</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    .ise-new-dif-slider-section {
+      width: 100%;
+    }
+
+    .unique-main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .unique-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .unique-card-container {
+      border-radius: 12px;
+      height: 100%;
+    }
+
+    .unique-card {
+      border-radius: 12px;
+      padding: 15px;
+      color: #333;
+      font-size: 14px;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .unique-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .unique-isb-h2 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .unique-isb-p {
+      margin-top: 6px;
+      font-size: 15px;
+      line-height: 1.4;
+      color: #5D5D5D;
+    }
+
+    .unique-isb-span {
+      font-weight: 600;
+    }
+
+    /* Colors */
+    .unique-green { background: #d9f4ec; }
+    .unique-blue { background: #d9ecf8; }
+    .unique-purple { background: #e9e5f9; }
+    .unique-yellow { background: #fff6d9; }
+    .unique-pink { background: #fde4ef; }
+    .unique-orange { background: #ffe4cc; }
+    .unique-teal { background: #ccf2f5; }
+    .unique-lavender { background: #e6e0ff; }
+
+    /* Right Side Image Slider */
+    .unique-right-col {
+      height: 100%;
+    }
+
+    .unique-image-slider {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 100%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .unique-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .unique-slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .unique-slide.slide-left {
+      animation: slideInLeft 0.6s ease forwards;
+    }
+
+    .unique-slide.slide-right {
+      animation: slideInRight 0.6s ease forwards;
+    }
+
+    @keyframes slideInLeft {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    .unique-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Slider Controls Design */
+    .unique-slider-controls {
+      position: absolute;
+      bottom: 34px;
+      left: 80%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      background-color: #FFFFFF;
+      border-radius: 30px;
+      color: #333;
+      padding: 3px 0px;
+      z-index: 10;
+    }
+
+    .unique-slider-btn {
+      background: none;
+      border: none;
+      color: #3C3C3C;
+      font-size: 16px;
+      margin: 0 5px;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .unique-slider-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Left Side Thumbnails */
+    .unique-thumbnail {
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s ease, transform 0.3s ease;
+      height: 100%;
+      width: 100%;
+    }
+
+    .unique-thumbnail:hover {
+      transform: translateY(-5px);
+    }
+
+    .unique-thumbnail.active {
+      border: 2px solid #007bff;
+    }
+
+    .unique-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media(max-width: 768px) {
+      .unique-main-container > .unique-row {
+        flex-direction: column;
+      }
+      
+      .unique-image-slider {
+        height: 300px;
+        margin-top: 20px;
+      }
+      
+      .unique-slider-controls {
+        padding: 6px 12px;
+      }
+      
+      .unique-slider-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+      }
+    }
+
+    .isb-uni-slii-ma-div {
+      margin-bottom: 40px;
+    }
+
+    .ise-new-dif-slider-section .col-md-4 {
+      padding: 5px;
+    }
+
+    
+    /* ✅ Equal Height + Width Fix for all 3 rows */
+    .unique-row-1 .col-md-4,
+    .unique-row-2 .col-md-4,
+    .unique-row-3 .col-md-4 {
+      display: flex;
+    }
+
+    .unique-row-1 .unique-card,
+    .unique-row-2 .unique-card,
+    .unique-row-3 .unique-thumbnail {
+      flex: 1;
+    }
+
+    /* Keep same height across all rows */
+    .unique-row-1 .unique-card,
+    .unique-row-2 .unique-card,
+    .unique-row-3 .unique-thumbnail {
+      min-height: 170px; /* adjust as needed */
+    }
+
+    .ise-new-dif-slider-section .col-md-5{
+      padding: 5px;
+    }
+
+    .unique-row-3 .col-md-4{
+      padding: 4px 3px;
+    }
+  </style>
+</head>
+<body>
+
+ <section class="ise-new-dif-slider-section">
+   <div class="unique-main-container">
+     <div class="isb-uni-slii-ma-div">
+       <h2 class="ispe-blog-newsection-h3">Why Choose ISpectra Technologies</h2>
+       <p class="isp-sub-pa-nee-top-headiv-p">At ISpectra, we combine strategy and innovation to produce measurable results.</p>
+     </div>
+
+    <div class="unique-row row">
+      <!-- Left Column - Cards -->
+      <div class="unique-left-col col-md-7">
+        <div class="unique-card-container">
+          <!-- Row 1 -->
+          <div class="unique-row-1 row">
+            <div class="col-md-4">
+              <div class="unique-card unique-green">
+                <h2 class="unique-isb-h2">98%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">SLA Compliance:</span> Reliable protection and delivery.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-blue">
+                <h2 class="unique-isb-h2">99%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">System/Service Uptime:</span> Zero downtime security.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-purple">
+                <h2 class="unique-isb-h2">80%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">Utilization Rate:</span> Efficient resource usage.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 2 -->
+          <div class="unique-row-2 row">
+            <div class="col-md-4">
+              <div class="unique-card unique-yellow">
+                <h2 class="unique-isb-h2">10</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">Defects (per 1000 Tests):</span> Low error rate.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-pink">
+                <h2 class="unique-isb-h2">18 Hrs</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">MTTR:</span> Quick recovery.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-card unique-pink">
+                <h2 class="unique-isb-h2">100%</h2>
+                <p class="unique-isb-p"><span class="unique-isb-span">Faster AI-Powered Response:</span> Smart defense.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Row 3 - Thumbnails -->
+          <div class="unique-row-3 row">
+            <div class="col-md-4">
+              <div class="unique-thumbnail active" data-slide="0">
+                <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Team Meeting">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-thumbnail" data-slide="1">
+                <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Discussion">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="unique-thumbnail" data-slide="2">
+                <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg" alt="Coding">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column - Image Slider -->
+      <div class="col-md-5">
+       <div class="unique-right-col">
+         <div class="unique-image-slider">
+          <!-- Slide 1 -->
+          <div class="unique-slide active">
+            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Team Meeting">
+          </div>
+          <!-- Slide 2 -->
+          <div class="unique-slide">
+            <img src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg" alt="Discussion">
+          </div>
+          <!-- Slide 3 -->
+          <div class="unique-slide">
+            <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg" alt="Coding">
+          </div>
+          <!-- Slider Controls -->
+          <div class="unique-slider-controls">
+            <button class="unique-slider-btn" id="unique-prevBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="unique-slider-btn" id="unique-nextBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+ </section>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const uniqueSlides = document.querySelectorAll('.unique-slide');
+      const uniqueThumbnails = document.querySelectorAll('.unique-thumbnail');
+      const uniquePrevBtn = document.getElementById('unique-prevBtn');
+      const uniqueNextBtn = document.getElementById('unique-nextBtn');
+      
+      let uniqueCurrentSlide = 0;
+      let isAutoSliding = true;
+      let slideInterval;
+
+      function showUniqueSlide(index, animationType = 'fade') {
+        uniqueSlides.forEach(slide => slide.classList.remove('slide-left', 'slide-right', 'active'));
+        uniqueThumbnails.forEach(thumbnail => thumbnail.classList.remove('active'));
+
+        if (animationType === 'slide') {
+          const direction = index > uniqueCurrentSlide ? 'slide-left' : 'slide-right';
+          uniqueSlides[index].classList.add(direction);
+        }
+
+        uniqueSlides[index].classList.add('active');
+        uniqueThumbnails[index].classList.add('active');
+        uniqueCurrentSlide = index;
+      }
+
+      function nextUniqueSlide() {
+        let index = uniqueCurrentSlide + 1;
+        if (index >= uniqueSlides.length) index = 0;
+        showUniqueSlide(index, 'fade');
+      }
+
+      function prevUniqueSlide() {
+        let index = uniqueCurrentSlide - 1;
+        if (index < 0) index = uniqueSlides.length - 1;
+        showUniqueSlide(index, 'fade');
+      }
+
+      function startAutoSlide() {
+        slideInterval = setInterval(() => {
+          if (isAutoSliding) nextUniqueSlide();
+        }, 5000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(slideInterval);
+      }
+
+      uniqueNextBtn.addEventListener('click', function() {
+        isAutoSliding = false;
+        stopAutoSlide();
+        nextUniqueSlide();
+        setTimeout(startAutoSlide, 10000);
+      });
+
+      uniquePrevBtn.addEventListener('click', function() {
+        isAutoSliding = false;
+        stopAutoSlide();
+        prevUniqueSlide();
+        setTimeout(startAutoSlide, 10000);
+      });
+
+      uniqueThumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', function() {
+          isAutoSliding = false;
+          stopAutoSlide();
+          const slideIndex = parseInt(this.getAttribute('data-slide'));
+          showUniqueSlide(slideIndex, 'slide');
+          setTimeout(startAutoSlide, 10000);
+        });
+      });
+
+      startAutoSlide();
+    });
+  </script>
+
+</body>
+</html>

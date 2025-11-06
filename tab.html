@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  
+    <title>Document</title>
+</head>
+<body>
+    <!-- isb- product page tab section -->
+
+<section class="iso-edge-produ-fan-section">
+    <div class="container">
+<div class="row">
+    <div class="col-md-6">
+        <div class="iso-edge-produ-fan-left"> 
+
+<h3 class="iso-edge-produ-fan-left-h3">What RCMEdge Covers for You</h3>
+<p class="iso-edge-produ-fan-left-p">RCMEdge takes care of the entire revenue cycle management process so providers can focus on delivering quality care. From claim creation to payment collection, iSpectra ensures accuracy, compliance, and efficiency every step of the way.
+
+</p>
+<h5 class="iso-edge-produ-fan-left-h5">Key Coverage Areas</h5>
+<p class="iso-edge-produ-fan-left-p">RCMEdge covers the entire revenue cycle with accuracy and ease. It streamlines claims management through automated creation and submission, while denial management helps catch errors early and reduce rejections. With real-time analytics, providers get clear insights into financial performance. Seamless integrations ensure smooth connectivity with EHRs and billing systems, while HIPAA-compliant security keeps sensitive data safe. Finally, payment posting and collections speed up reimbursements and provide full transparency.
+
+</p>
+        </div>
+    </div>
+    <!----
+<div class="col-md-6">
+    <div  class="iso-edge-produ-fan-right">
+
+<div class="iso-edge-produ-fan-right-div">
+    <img     class="iso-edge-produ-fan-right-div-img"   src="images/fan-pro-2.png" alt="">
+</div>
+
+
+    </div>
+</div> -->
+<div class="col-md-6">
+  <div class="iso-edge-produ-fan-right">
+
+    <div class="iso-edge-produ-fan-right-div">
+      <!-- Rotating Image -->
+      <img class="iso-edge-produ-fan-right-div-img" src="images/fan-pro-2.png" alt="">
+
+      <!-- Fixed Content -->
+       <div class="fan-content-1 integration-1"><img class="faan-cen-iconimg" src="images/fan-icon-isp.png" alt=""></div>
+      <div class="fan-content integration-ip"><p class="fan-pro-sec-ptag">Integration Support</p></div>
+      <div class="fan-content compliance-ip"><p class="fan-pro-sec-ptag">Compliance & Security</p></div>
+      <div class="fan-content claims-ip"><p class="fan-pro-sec-ptag">Claims Management</p></div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+    </div>
+</section>
+
+
+
+<!-- fan animation popup script -->
+ <!-- fan animation popup script -->
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const fanContents = document.querySelectorAll(".fan-content");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = "transform 0.7s ease, opacity 0.7s ease";
+        entry.target.style.transform = "scale(1)";
+        entry.target.style.opacity = "1";
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  fanContents.forEach(fan => {
+    fan.style.transform = "scale(0.5)"; // initial scale
+    fan.style.opacity = "0"; // initial opacity
+    observer.observe(fan);
+  });
+});
+</script>
+
+<style>
+   /* product edge fan section */
+
+.iso-edge-produ-fan-section{
+    margin-top: 60px;
+}
+
+/*
+.iso-edge-produ-fan-right-div-img{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+
+} */
+
+/* fan ianimation css */
+
+.iso-edge-produ-fan-right-div {
+  position: relative;
+  width: 400px; /* adjust to your image size */
+  height: 400px;
+  margin: 0 auto;
+}
+
+/* Rotating image */
+.iso-edge-produ-fan-right-div-img {
+  width: 100%;
+  height: 100%;
+  animation: rotateFan 12s linear infinite;
+}
+
+@keyframes rotateFan {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Content items fixed (do not rotate) */
+
+
+
+
+/* hover animation */
+.fan-content {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  color: black;
+}
+
+.fan-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* start completely to the left */
+  width: 100%;
+  height: 100%;
+  background-color: #7E3BC5 ; /* hover background color */
+  z-index: 0;
+  transition: left 0.5s ease;
+}
+
+.fan-content:hover::before {
+  left: 0; /* slide in from left */
+}
+
+.fan-content p {
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s ease;
+}
+
+.fan-content:hover p {
+  color: white; /* text color on hover */
+}
+
+
+
+/* */
+.fan-content {
+  position: absolute;
+  background: white;
+  padding: 10px 10px;
+  border-radius: 25px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+/* Place each item around the circle */
+.integration-ip {
+  top: 20%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.fan-content-1 {
+  position: absolute;
+  
+ 
+  border-radius: 8px;
+  font-size: 14px;
+ 
+  white-space: nowrap;
+}
+
+/* Place each item around the circle */
+.integration-1 {
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
+.faan-cen-iconimg{
+    width: 80%;
+}
+
+.fan-pro-sec-ptag{
+    margin-bottom: 0px;
+
+    color:#7E3BC5 ;
+    width: 50%;
+    text-align: center;
+    font-weight: 600;
+}
+
+.compliance-ip {
+  top: 50%;
+  right: -20%;
+  transform: translateY(-50%);
+}
+
+.claims-ip {
+  bottom: 12%;
+  left: -5%;
+}
+</style>
+</body>
+</html>
